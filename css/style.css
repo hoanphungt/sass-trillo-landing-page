@@ -82,7 +82,6 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  font-size: inherit;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -276,9 +275,9 @@ body {
       margin-left: .8rem; }
   .btn-inline:focus {
     outline: none;
-    animation: plusate 1s infinite; }
+    animation: pulling 1s; }
 
-@keyframes plusate {
+@keyframes pulling {
   0% {
     transform: scale(1);
     box-shadow: none; }
@@ -357,3 +356,45 @@ body {
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: pulling 1s infinite; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -10rem; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
+  .btn:hover .btn__visible {
+    transform: translateY(10rem); }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:focus {
+    outline: none; }
